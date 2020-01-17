@@ -19,6 +19,7 @@ const Home = () => {
         To understand the "hows" and "why's" behind this repo, check out Jacob's
         blog post on <a href="#">Creating a React App from Scratch</a>
       </p>
+      <p>hi</p>
     </Layout>
   );
 };
