@@ -1,6 +1,6 @@
 {
-  "name": "react-from-scratch-starter",
-  "version": "1.0.0",
+  "name": "housing-indexing-app-client",
+  "version": "0.1.0",
   "description": "",
   "main": "./public/index.html",
   "scripts": {
@@ -16,13 +16,18 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.18",
-    "react-router-dom": "^5.1.2"
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.3.2",
@@ -30,6 +35,7 @@
     "eslint-config-react": "^1.1.7",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-react": "^7.18.0",
+    "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
