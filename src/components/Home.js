@@ -1,7 +1,9 @@
 import React from 'react';
 import Layout from './Layout';
+import { connect } from 'react-redux';
+import { triggerAlert } from '../redux/actionCreators/alert';
 
-const Home = () => {
+const Home = ({ alerts, triggerAlert }) => {
   return (
     <Layout>
       <h1>
@@ -20,8 +22,21 @@ const Home = () => {
         blog post on <a href="#">Creating a React App from Scratch</a>
       </p>
       <p>hi</p>
+
+      <button
+        onClick={() => {
+          triggerAlert();
+          console.log('triggered alerts:', alerts);
+        }}
+      >
+        Dispatch Set Alert
+      </button>
     </Layout>
   );
 };
 
-export default Home;
+const mapState = state => ({
+  alerts: state.alerts,
+});
+
+export default connect(mapState, { triggerAlert })(Home);
