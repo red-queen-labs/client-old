@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
@@ -16,21 +15,27 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: ['file-loader'],
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx', 'json'],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public/'),
+    contentBase: path.join(__dirname, 'public'),
     port: 2222,
     publicPath: 'http://localhost:2222/dist/',
     hot: true,
   },
   output: {
-    path: path.resolve(__dirname, 'build/'),
-    publicPath: '/build/',
+    path: path.resolve(__dirname, 'dist/'),
+    publicPath: '/dist/',
     filename: 'bundle.js',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new HtmlWebpackPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
