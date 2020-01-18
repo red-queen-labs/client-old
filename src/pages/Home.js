@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import { connect } from 'react-redux';
-import { triggerAlert } from '../redux/actionCreators/alert';
+import { triggerAlert } from '../redux/actions/alert';
 
 const Home = ({ alerts, triggerAlert }) => {
   return (
