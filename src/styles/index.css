@@ -16,3 +16,23 @@ body {
 a {
   color: #fcfcfc;
 }
+
+.playerContainer {
+  position: relative;
+  z-index: 1;
+}
+
+#player {
+  position: absolute;
+  z-index: 1;
+  width: 80vw;
+  height: auto;
+}
+
+.videoOverlay {
+  position: absolute;
+  z-index: 2;
+  left: 50px;
+  top: 50px;
+  /* margin: 50px auto 30px; */
+}

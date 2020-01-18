@@ -22,10 +22,10 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', 'json'],
+    extensions: ['.js', '.jsx', '.json'],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'public/'),
     port: 2222,
     publicPath: 'http://localhost:2222/dist/',
     hot: true,
@@ -35,7 +35,5 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'bundle.js',
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 };
