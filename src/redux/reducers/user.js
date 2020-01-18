@@ -1,4 +1,6 @@
-import { SIGN_USER_IN_SUCCESS, SIGN_USER_IN_FAIL } from '../types';
+import { SIGN_USER_IN_SUCCESS, SIGN_USER_IN_FAIL } from '../actionTypes';
+
+// change to SIGN_UP
 
 const initialState = {};
 
