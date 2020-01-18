@@ -3,17 +3,32 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
+import Layout from './components/Layout';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
+import Login from './pages/Login';
+import GoogleMap from './pages/GoogleMap';
 
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route exact path="/signup" component={Signup} />
-        </Switch>
+        <Layout>
+          <Switch>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/map">
+              <GoogleMap />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Layout>
       </Router>
     </Provider>
   );

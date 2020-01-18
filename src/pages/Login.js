@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import logUserIn from '../redux/actions/user';
 import { withRouter } from 'react-router-dom';
 
-const Signup = () => {
+const Login = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -29,4 +30,4 @@ const Signup = () => {
   );
 };
 
-export default withRouter(connect()(Signup));
+export default withRouter(connect(null, {})(Login));

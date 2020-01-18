@@ -4,6 +4,7 @@ import SEO from './SEO';
 import Header from './Header';
 import SideBar from './SideBar';
 import SnackBar from './Alert';
+import Footer from './Footer';
 
 const Layout = ({ alerts, children }) => {
   const [sideBarIsOpen, toggleSidebar] = useState();
@@ -18,6 +19,8 @@ const Layout = ({ alerts, children }) => {
       ))}
 
       <main>{children}</main>
+
+      <Footer />
     </div>
   );
 };

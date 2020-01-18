@@ -1,24 +1,21 @@
 import React, { useEffect } from 'react';
-import Layout from '../components/Layout';
 import { connect } from 'react-redux';
 import { triggerAlert } from '../redux/actions/alert';
+import { withRouter } from 'react-router-dom';
 
 import { Button } from '@material-ui/core';
+import HomeSearchBox from '../components/HomeSearchBox';
 
 const Home = ({ alerts, triggerAlert }) => {
   return (
-    <Layout>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => {
-          triggerAlert('alert triggered!!', 'success', 2000);
-          console.log('triggered alerts:', alerts);
-        }}
-      >
-        Dispatch Set Alert
-      </Button>
-    </Layout>
+    <div className="homeContainer">
+      <h1>Find more apartments!</h1>
+      <h3>Search a city or zip code.</h3>
+
+      <HomeSearchBox />
+
+      <p>We find more apartments than anyone else.</p>
+    </div>
   );
 };
 
