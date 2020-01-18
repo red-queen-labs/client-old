@@ -3,19 +3,21 @@ import Layout from '../components/Layout';
 import { connect } from 'react-redux';
 import { triggerAlert } from '../redux/actions/alert';
 
+import { Button } from '@material-ui/core';
+
 const Home = ({ alerts, triggerAlert }) => {
   return (
     <Layout>
-      <h1>Housing Indexing App</h1>
-
-      <button
+      <Button
+        variant="contained"
+        color="primary"
         onClick={() => {
-          triggerAlert();
+          triggerAlert('alert triggered!!', 'success', 2000);
           console.log('triggered alerts:', alerts);
         }}
       >
         Dispatch Set Alert
-      </button>
+      </Button>
     </Layout>
   );
 };
@@ -25,3 +27,6 @@ const mapState = state => ({
 });
 
 export default connect(mapState, { triggerAlert })(Home);
+
+// AFFORDABILITY METER
+// SIMULATE A SEARCH REQUEST
